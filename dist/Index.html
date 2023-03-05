@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipes</title>
+  </head>
+  <body>
+    <div class="container">
+      
+      <input id="recipe-input" type="text" placeholder="Enter recipe name :  "/>
+      <div>
+      <input type="checkbox"  id="gluten-btn" > Gluten Free
+      <input type="checkbox"  id="dairy-btn"> Dairy Free
+      <div><button id="recipe-btn">Serarch</button>
+      
+      <div class="main"></div>
+
+      <div class="pagination">
+        <a href="#">&laquo;</a>
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#">4</a>
+        <a href="#">&raquo;</a>
+      </div>
+      
+    </div>
+
+
+
+
+
+    <script id="recipes-template" type="text/x-handlebars-template">
+      {{#each recipes}}
+        <div class='item'>
+          <a href='{{href}}' target='_blank'>{{title}}</a>
+          <img src='{{thumbnail}}' id="pic"/>
+          <h4>Ingredients :</h4>
+          <ul class='list'>
+            {{#each ingredients}}
+              <li>{{this}}</li>
+            {{/each}}
+          </ul>
+        </div>
+      {{/each}}
+      
+    </script>
+
+
+
+
+
+    <script src="/handlebars/dist/handlebars.js"></script>
+    <script src="/jquery/dist/jquery.js"></script>
+    <script src="Renderer.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

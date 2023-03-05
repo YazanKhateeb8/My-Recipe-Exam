@@ -1,0 +1,77 @@
+
+body {
+  background-color: #f8c291;
+}
+
+
+.container {
+  padding: 10px;
+  height: 100vh;
+}
+
+
+
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.item {
+  display: grid;
+  grid-template-areas:
+    'h h h'
+    '. i .'
+    'l . .'
+    'li li li'
+    ;
+  width: 500px;
+  height: 400px;
+  background-color:#fa983a;
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px silver solid;
+  margin-top: 10px;
+}
+
+.item > a {
+  grid-area: h;
+  text-align: center;
+}
+
+.item > img {
+  grid-area: i;
+  width: 150px;
+  height: 100px;
+  margin-left: 30px;
+  margin-top: 15px;
+}
+
+.item > h4 {
+  grid-area: l;
+}
+
+.list {
+  grid-area: li;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr ;
+  
+}
+
+
+
+.pagination {
+  display: inline-block;
+  position: end;
+  
+}
+
+.pagination a {
+  color: black;
+  float: left;
+  padding: 8px 16px;
+  text-decoration: none;
+}
